@@ -1,0 +1,199 @@
+<?php 
+	//require("user_access.inc.php");
+	//$pfl = 1;	/* Perfil del usuario en la sesión actual */
+	//if ($pfl != $_SESSION['usr_pfl']) {
+	//	header("location: $redir?error_login=5");
+	//	exit;
+	//}
+	/* Cuenta de usuario para la sesión actual */
+	include("config.inc.php");
+	$sql = "SELECT usr.cod_empl, usr.logusr, perfusr.nmbpfl FROM usr Inner Join perfusr ON usr.cod_pflusr = perfusr.cod_pflusr WHERE usr.cod_empl = '".$_SESSION['usr_empl']."'";
+	$qry = mysql_query($sql, $lnk);
+	$reg = mysql_fetch_assoc($qry);
+?>
+<html>
+<head>
+<title>UNAD &#8212; Objeto Virtual de Aprendizaje</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="../public/css/nav-h2.css" />
+<script language="javascript" src="../public/js/nav-h.js"></script>
+<style type="text/css">
+<!--
+.Estilo2 {color: #666666}
+-->
+</style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> <div class="container"><div class="row"><div class="col-4 bg-primary">
+  <main class="container"><div class="dropdown mb-3">
+    <button class="button.btn.btn-success dropdown-troggle" type="button" id="dropdownmenubutton" data-troggle="aria-haspopup"true="aria-expanded">Boton Desplegar </button> <div class="dropdown-menu"aria-labelledby="dropdownmenubutton">
+     
+    </div>
+    <div class="dropdown mb-3">
+      <a href="" class="btn btn secundary-dropdown-toggle" role="botton" id="dropdownmenuenlace" 
+      data-troggle="aria-haspopup"true="">Enlace Desplegar</a>
+       <div class="dropdown-menu" aria=labelledby></div>
+    </div>
+  </div></main>
+     <p>INICIO</p>
+   </div>
+     
+   </div>
+ </div>
+<table  width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top">
+		<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+    <tr>
+			<td align="center" valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+	      <tr>
+  	      <td height="10" align="center" valign="top" bgcolor="#44444E"></td>
+        </tr>
+        <tr>
+    	    <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+					<td width="15" bgcolor="#44444E">&nbsp;</td>
+					<td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="5"><img src="tv.png" width="5" height="5" alt="" /></td>
+					<td> </td>
+					<td width="3"><img src="../public/img/temp_top_right_im.jpg" width="5" height="5" alt="" /></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+					<td width="5">&nbsp;</td>
+					<td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+                              <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="center" valign="top"><table width="100%" border="0" cellspacing="4" cellpadding="0">
+                                    <tr>
+                                      <td width="69%" height="80">&nbsp;</td>
+                                      </tr>
+                                    <tr>
+                                      <td><table border="0" align="right" cellpadding="2" cellspacing="0">
+                                        <tr>
+                                          <td width="15" class="light_gray_text"><img src="tv.png" width="16" height="16"></td>
+                                          <td class="light_gray_text"><span class="black_bold_tixt">Usuario</span>: [<?php echo $reg['logusr']; ?>]</td>
+                                          <td class="light_gray_text"><span class="black_bold_tixt"><img src="../public/img/usuarios.gif" width="16" height="16" align="absmiddle"></span></td>
+                                          <td class="light_gray_text"><span class="black_bold_tixt">Dise&ntilde;o de Sitios Web</span></td>
+                                          <td class="light_gray_text"><img src="../public/img/site_mape_icone.jpg" width="11" height="11" alt="" /></td>
+                                          <td bgcolor="#333333" class="light_gray_text"><a href="#" class="bold_sky_text Estilo2" onClick="if(confirm('&iquest;Est&aacute; seguro que desea cerrar la sesi&oacute;n de trabajo actual?')){ window.location='logout.inc.php';}">pulsa aqui para salir</a></td>
+                                        </tr>
+                                      </table></td>
+                                    </tr>
+                                
+                                <tr>
+                                  <tdalign="center" valign="top">  <table width="100%" border="0" cellspacing="0" cellpadding="0"></td> 
+                                    </tr>
+                                      <td align="center"> <table width="100%" border="0" cellpadding="0" cellspacing="0" background="../public/img/bg-top-nav.jpg"></td>   
+                                        <tr></tr> 
+                                          <td width="4"><img src="../public/img/left-top-nav.jpg" width="4" height="35" /></td>
+                                          
+<!-- Barra de menú -->																					
+<ul id="navmenu-h">
+	<!-- Menú Inicio -->
+   <div class="container"><div class="row"><div class="col-4 bg-primary">
+     <p>Inicio</p>
+
+   </div>
+     
+   </div>
+
+ </div>
+  <img  src="unad.png" style="position: absolute; top: 0; left: 0;" />
+	<li><a href="cont.php" target="ifrm">Inicio</a></li>
+	<!-- Menú Configuración Básica -->
+	<a href="" target="">Objetivos</a>
+		<ul>
+			<li><a href="index.html" target="ifrm"> Tematicas</a></li>
+			<li><a href="container/container.html" target="ifrm">Multimedia</a></li>
+			<li><a href="info_familia/relfam_lst.php" target="ifrm">Actividades/Familiaridad</a></li>
+			<li><a href="rh/rh_lst.php" target="ifrm">Palabras Claves</a></li>
+			<li><a href="lectura.html" target="ifrm">AUTORES</a></li>
+			<li><a href="tipo_usuario/pfl_lst.php" target="ifrm"> LECTURAS</a>
+			<!-- División Geográfica -->
+				<li><a href="" target="" color="#0000FF;">O.V.I Unidad 3 </a>
+					<ul>
+						<li><a href="index.html" target="ifrm">Videos</a></li>
+						<li><a href="mun/mun_lst.php" target="ifrm">HTML 5-HEADER</a></li>
+					</ul>
+				</li>
+		</ul>
+	</li>  </table></td>
+                                </tr>
+	<!-- Menú Plantel Educativo -->
+	<li><a href="container/grid.html" target=""> <font color="orange">Contenidos Didacticos </font></a>
+		<ul>
+   
+			<li><a href="centro/instedu_lst.php" target="ifrm">Titulo</a></li>
+			<li><a href="sede/sede_lst.php" target="ifrm">Ingenieria en Telecomunicaciones</a></li>
+			<li><a href="empl/empl_lst.php" target="ifrm">Materia</a></li>
+			<li><a href="../lib/fpdf/empleados.php" target="_blank">Comunidades</a></li>
+		</ul>
+	</li>
+	<!-- Información Académica -->
+  <li><a href="" target="">Información Académica</a>
+    <ul>
+      <li><a href="nivel_titula/nivesc_lst.php" target="ifrm">Niveles de Escolaridad</a></li>
+      <li><a href="titulacion/grad_lst.php" target="ifrm">Grados de Escolaridad</a></li>
+        <!-- Carga Académica -->
+        <li><a href="" target="ifrm">Carga Académica&#9654;</a>
+          <ul>
+            <li><a href="area/area_lst.php" target="ifrm">Área Académica</a></li>
+            <li><a href="asig/asig_lst.php" target="ifrm">Asignatura Académica</a></li>
+          </ul>
+        </li>
+    </ul>
+  </li>
+	
+	<!-- Menú Herramientas de Control -->
+
+	<li><a href="" target="">Herramientas</a>
+		<ul>
+			<li><a href="auditoria/audit.php" target="ifrm">Registro de Auditoria</a></li>
+			<li><a href="" target="">Administrar Backup&#9654;</a>
+				<ul>
+					<li><a href="../backup/bkp.config.php" target="ifrm">Configuración de respaldo</a></li>
+					<li><a href="../backup/bkp.config_mod.php" target="ifrm">Editar Configuración</a></li>
+				</ul>
+			</li>	
+			
+			<li><a href="" target="ifrm">Autor del OVI </a></li>
+			<li><a href="Ejercicios.html" target="ifrm">Ejercicios</a></li>
+			<!--<li><a href="" target="">Eliminar Backup</a></li> -->
+		</ul>
+	</li>
+	<!-- Menú Sesión -->
+	<li><a href="" target="">Panel de Sesión</a>
+		<ul>
+			<li><a href="container/container-ejercicio.html" target="ifrm">Autores</a></li>
+			<li><a href="#" target="" onClick="if(confirm('¿Está seguro que desea cerrar la sesión de trabajo actual?')){ window.location='logout.inc.php';}">Salir</a></li>
+		</ul>
+	</li>
+</ul>
+			</td>
+                                          <td width="5"><img src="../public/img/right-top-nav.jpg" width="5" height="35" /></td>
+                                       
+              <td align="center" valign="top"><table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#44444E">
+                <tr>  <a href="https://www.contadorvisitasgratis.com" title="contador web"><img src="https://counter6.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=4af97kh94auhhl167y3k8jpcdmjbt8q6" border="0" title="contador web" alt="contador web"></a>
+                  <td align="center"><span class="very_light_gray">Dise&ntilde;ado por: Andres Garavi&ntilde;o</span></td>
+                </tr>
+              </table></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<!-- End ImageReady Slices -->
+
+</body>
+</html>
+<?php 
+	/* Libera la memoria del resultado */
+	mysql_free_result($qry);
+?>
